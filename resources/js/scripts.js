@@ -63,7 +63,7 @@ $(document).ready(function(){
             $("p").html("latitude: " + $geoLatitude + "<br>longitude: " +$geoLongitude);
             //var $url = 'http://api.openweathermap.org/data/2.5/forecast?lat='+ $geoLatitude + '&lon=' + $geoLongitude + '&appid=' + $appid;
 
-            var $url = 'http://api.openweathermap.org/data/2.5/weather?lat='+ $geoLatitude.toFixed(6) + '&lon=' + $geoLongitude.toFixed(6) + '&appid=' + $appid;
+            var $url = 'https://api.openweathermap.org/data/2.5/weather?lat='+ $geoLatitude.toFixed(6) + '&lon=' + $geoLongitude.toFixed(6) + '&appid=' + $appid;
 
             //2. Get the local weather using the results from the ip address
               $.getJSON($url)
@@ -158,7 +158,7 @@ function updateWeatherContainer(response) {
   //  $('p').text(date);
 
   // Now let's return the forecast data
-   var $url = 'http://api.openweathermap.org/data/2.5/forecast?lat='+ $geoLatitude + '&lon=' + $geoLongitude + '&appid=' + $appid;
+   var $url = 'https://api.openweathermap.org/data/2.5/forecast?lat='+ $geoLatitude + '&lon=' + $geoLongitude + '&appid=' + $appid;
 
    $.getJSON($url)
     .done(updateWeatherForecast)
